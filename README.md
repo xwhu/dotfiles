@@ -4,7 +4,7 @@
 1. how to set 模糊拼音 for 小鹤双拼 in Rime
 2. how to read weibo and weixin on the command line ? (or any low cost terminal application)
 
-自从到华为以后，桌面就从 Linux 换成了 Windows 。背后的主要原因也是说整个公司的 IT 系统要依赖 Windows ，用 Linux 连最基本的办公都搞不定。
+自从换工作以后，桌面就从 Linux 换成了 Windows 。背后的主要原因也是说整个公司的 IT 系统要依赖 Windows ，用 Linux 连最基本的办公都搞不定。
 这样慢慢习惯，就五年过去了。这段时间里，对 OS X的熟悉程度反而比 Linux 更高了。
 期间花了一点时间，想把用 Linux 的习惯重新捡起来。但其实系统基本还是在 Windows 下用。没法，就是习惯啊。
 
@@ -41,7 +41,7 @@ Touchpad 总是会在正常使用过程中被误触，PalmDetect配置如下，但实际效果很差。
 
 确认在不接触键盘的情况下，TouchpadOff 被自动设置为0。否则，会被设置为2。
 
-Arch Linux 的 Wiki 上有[一篇文章][https://wiki.archlinux.org/index.php/Touchpad_Synaptics]很
+Arch Linux 的 Wiki 上有[一篇文章](https://wiki.archlinux.org/index.php/Touchpad_Synaptics)很
 详细的解释了 Synaptics 的各种配置。
 
 此外，有时候屏幕会没有由来的黑掉，需要一个小脚本来重置。设成一个 shortcut 就好了。
