@@ -28,7 +28,7 @@ tztime local {
 }
 
 tztime beijing {
-  format = " %Y-%m-%d %H:%M"
+  format = " %Y-%m-%d %H:%M   "
   timezone = "Asia/Shanghai"
 }
 
