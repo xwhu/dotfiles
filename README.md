@@ -41,8 +41,8 @@ Touchpad 总是会在正常使用过程中被误触，PalmDetect配置如下，但实际效果很差。
 
 确认在不接触键盘的情况下，TouchpadOff 被自动设置为0。否则，会被设置为2。
 
-Arch Linux 的 Wiki 上有[一篇文章](https://wiki.archlinux.org/index.php/Touchpad_Synaptics)很
-详细的解释了 Synaptics 的各种配置。
+Arch Linux 的 Wiki 上有[一篇文章](https://wiki.archlinux.org/index.php/Touchpad_Synaptics)
+很详细的解释了 Synaptics 的各种配置。
 
 此外，有时候屏幕会没有由来的黑掉，需要一个小脚本来重置。设成一个 shortcut 就好了。
 
@@ -98,7 +98,3 @@ Arch Linux 的 Wiki 上有[一篇文章](https://wiki.archlinux.org/index.php/Touchpad_
 ## choice of web browser
 + [This](http://blog.getbatterybox.com/which-browser-is-the-most-energy-efficient-chrome-vs-safari-vs-firefox/)
   is a interesting read on energy efficient comparision between major browsers
-
-## software license
-+ The download link for FlareGet Pro is given to you above. Download and install FlareGet Pro. After installation, run it and register it with the following:
-    License key: 5B755-E8178-BABD7-BB8EB-026CF
