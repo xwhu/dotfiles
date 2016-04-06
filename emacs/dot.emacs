@@ -13,20 +13,23 @@
     (progn
       (set-default-font "-outline-新宋体-normal-normal-normal-mono-*-*-*-*-c-*-iso10646-1")))
 
-;; load org mode by default
-(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-cc" 'org-capture)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
 
 ;; 加载常用功能库
 ;;******************************************************************
 (require 'align)
 (require 'linum)
-(require 'org)
+; (require 'org)                      ; do not load built-in org
+(require 'git)                        ; this depends on git-el
 ;; (global-auto-complete-mode t)
+
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+;; load org mode by default
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+(setq org-log-done t)
 
 ;; 高亮风格，color-theme插件
 ;;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,7 +63,7 @@
 (setq-default tab-width 4)           ; Tab缩进4个字符
 (setq-default indent-tabs-mode nil)
 (setq-default make-backup-files nil) ; 默认不要生成临时文件
-
+(ido-mode t)                         ; enable ido mode for fast switch and find files
 
 ;; 编码设置
 ;;******************************************************************
@@ -92,7 +95,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Noto Sans Mono CJK SC" :foundry "adobe" :slant normal :weight normal :height 241 :width normal)))))
+ '(default ((t (:family "Noto Sans Mono CJK SC" :foundry "adobe" :slant normal :weight normal :height 151 :width normal)))))
 
 
 (defun backward-delete-word (arg)

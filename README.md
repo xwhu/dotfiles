@@ -108,6 +108,20 @@ Arch Linux 的 Wiki 上有[一篇文章](https://wiki.archlinux.org/index.php/Touchpad_
 + How to delete word instead of characters (done) M-backspace
 + iswitchb 已经被废弃了，用 ido
 
+### emacs git-mode
+
+虽然很简陋，但够用就好
+
+>  M-x git-status
+>  用 m 来 mark 文件
+>  用 c 进入 commit changelog 写作模式
+>  C-c C-c 提交 commit
+
+### 注意 C-z 的意义
+
+C-z 本意是 suspend-frame 。在 X 环境下，本来应该是把应用最小化的。偏偏 i3 不支持最小化的概念。
+只能切换到另外的 workspace ，然后再次切换回来。
+
 ## Ubuntu的软件包管理方法
 ### get list of files inside the package
 + dpkg -L <pkg name>
@@ -117,5 +131,8 @@ Arch Linux 的 Wiki 上有[一篇文章](https://wiki.archlinux.org/index.php/Touchpad_
 ## choice of web browser
 + [This](http://blog.getbatterybox.com/which-browser-is-the-most-energy-efficient-chrome-vs-safari-vs-firefox/)
   is a interesting read on energy efficient comparision between major browsers
+
 + 目前来看 firefox 是比较好的选择，系统的负载一直比较低
+
++ Firefox 里可以用 Alt+<num> 的方式来选择 TAB
 + 在线书签用 **raindrop.io**  
