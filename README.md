@@ -69,6 +69,21 @@ Arch Linux 的 Wiki 上有[一篇文章](https://wiki.archlinux.org/index.php/Touchpad_
 + 能不能在i3bar上显示更多的内容
 
 ### 命令行操作
+
+#### 配置 shell
+
+>     $ git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
+
+在 .bashrc 里增加：
+
+>     if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
+>        source ~/.bash-git-prompt/gitprompt.sh
+>        GIT_PROMPT_ONLY_IN_REPO=1
+>        GIT_PROMPT_THEME=Default_Ubuntu
+>     fi
+
+#### 其他
+
 + 怎么调整时区？/etc/timezone (todo: 怎么查询当前所在地对应的 timezone 名字？)
 + 调整音量: pavucontrol 命令行启动 GUI
 + 在命令行下怎么连接网络？ nmcli 的关键命令有哪些？
