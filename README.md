@@ -84,9 +84,25 @@ Arch Linux 的 Wiki 上有[一篇文章](https://wiki.archlinux.org/index.php/Touchpad_
 
 #### 其他
 
-+ 怎么调整时区？/etc/timezone (todo: 怎么查询当前所在地对应的 timezone 名字？)
++ 怎么调整时区？
+
+>    $ tzselect
+或者
+>    $ dpkg-reconfigure tzdata
+
+可以选择合适的位置，然后把结果存到 /etc/timezone 里
+
 + 调整音量: pavucontrol 命令行启动 GUI
 + 在命令行下怎么连接网络？ nmcli 的关键命令有哪些？
+
+>     $ nmcli d wifi rescan wlan0
+
+可以用来重新扫描可用的无线接入频道
+
+>     $ nmcli d wifi list wlan0
+>     $ nmcli d wifi connect  <ssid> <password>
+
+还是很简单的
 
 + 下载，用 aria2
 + 下载 youtube 视频用 youtube-dl
@@ -105,8 +121,17 @@ Arch Linux 的 Wiki 上有[一篇文章](https://wiki.archlinux.org/index.php/Touchpad_
 + 针对各个应用的 proxy 配置
   
 ## Emacs
+
+两天下来还是很欣喜的，本来以为要重新捡起来没那么容易。但真的有身体记忆那么回事情，很多组合键，不自觉的就按下去了。
+按下去以后才回味，我这到底是要用什么功能呢？
+
+跨系统的写作，最好的方案其实还是 emacs + git 。5年过去了，似乎什么都没有变化呢。
+
 + How to delete word instead of characters (done) M-backspace
 + iswitchb 已经被废弃了，用 ido
+
++ 中文输入法的问题
+需要用LC_ALL=zh_CN.UTF-8启动，否则不会正确选择C-space作为输入法启动快捷键。
 
 ### emacs git-mode
 
@@ -136,3 +161,24 @@ C-z 本意是 suspend-frame 。在 X 环境下，本来应该是把应用最小化的。偏偏 i3 不支持
 
 + Firefox 里可以用 Alt+<num> 的方式来选择 TAB
 + 在线书签用 **raindrop.io**  
+
+## 安全启动
+
+### 正常的做法
+
++ openssl req -new -x509 -newkey rsa:2048 -keyout MOK.priv -outform DER -out MOK.der -nodes -days 36500 -subj "/CN=XINWEI/"
++ mokutil --import MOD.der
++ sign-file MOD.priv MOD.der wl.ko
+
+### 16.04的bug
+
+不支持mok里的key导入，/proc/keys里看不到
+keyctl list %:.system_keyring里没有
+
++ mokutil --disable-validation # 禁止使用安全启动后的模块验证
+
+## todo:
+
++ how to copy-paste between x applications ? universal way.
+$(xclip -o)
+
